@@ -1,0 +1,162 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f8ff; /* Alice Blue */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+.container {
+    background-color: #fff0f5; /* Lavender Blush */
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 90%;
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive;
+    color: #ff69b4; /* Hot Pink */
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #777;
+    font-size: 1.1rem;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload, #webcam-button {
+    background-color: #add8e6; /* Light Blue */
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.custom-file-upload:hover, #webcam-button:hover {
+    background-color: #87ceeb; /* Sky Blue */
+    transform: translateY(-2px);
+}
+
+.custom-file-upload {
+    display: inline-block;
+}
+
+.or-separator {
+    color: #ffb6c1; /* Light Pink */
+    font-weight: bold;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#webcam-video {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+#capture-button {
+    background-color: #90ee90; /* Light Green */
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#result-container.hidden, #loading-spinner.hidden {
+    display: none;
+}
+
+.polaroid {
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: inline-block;
+    margin-top: 2rem;
+    border-radius: 5px;
+}
+
+.polaroid img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+}
+
+.caption {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #555;
+}
+
+#prediction-label {
+    font-size: 1.5rem;
+    color: #ff69b4;
+}
+
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #90ee90;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: 2rem auto 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

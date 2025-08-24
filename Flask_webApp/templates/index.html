@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>😷 Face Mask Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>😷 Is Your Mask On Right? 🤔</h1>
+            <p>Let's check it out! Upload a photo or use your webcam.</p>
+        </header>
+
+        <main>
+            <div class="controls">
+                <div class="upload-section">
+                    <label for="file-upload" class="custom-file-upload">
+                        📁 Upload a Photo
+                    </label>
+                    <input id="file-upload" type="file" accept="image/*"/>
+                </div>
+                <div class="or-separator">
+                    <span>OR</span>
+                </div>
+                <div class="webcam-section">
+                    <button id="webcam-button">📸 Capture from Webcam</button>
+                </div>
+            </div>
+
+            <div id="webcam-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h2>Say Cheese! 😁</h2>
+                    <video id="webcam-video" autoplay></video>
+                    <button id="capture-button">Click!</button>
+                </div>
+            </div>
+
+            <div id="result-container" class="hidden">
+                <div class="polaroid">
+                    <img id="result-image" src="" alt="Your Photo">
+                    <div class="caption">
+                        <p id="prediction-label"></p>
+                        <p id="prediction-confidence"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="loading-spinner" class="hidden">
+                <div class="spinner"></div>
+                <p>Analyzing... 🧐</p>
+            </div>
+
+        </main>
+
+        <footer>
+            <p>Made with ❤️ and a little bit of magic ✨</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
