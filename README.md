@@ -82,7 +82,7 @@ To run this project on your local machine, follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/aanyashukla/Face_Mask_Detection.git](https://github.com/aanyashukla/Face_Mask_Detection)
+    git clone https://github.com/aanyashukla/Face_Mask_Detection.git
     ```
 
 2.  **Navigate to the app directory:**
